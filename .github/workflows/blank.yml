@@ -2,12 +2,20 @@ name: Hello World
 
 on: workflow_dispatch
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello Step
-        run:  |
-          echo "Welcome to GHA"
-          echo "Welcome to GHA2"
-          echo "Welcome to GHA3"
+      - name: Build Step
+        run: echo "A demo build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  Test Phase
+        run: echo "Runnning Test Cases"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to App
+        run: echo "Deploying the app"
   
